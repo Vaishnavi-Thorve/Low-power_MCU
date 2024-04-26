@@ -1,0 +1,2 @@
+//For compiling VSIM
+make clean && make helloworld.read && make vcompile && make helloworld.vsim

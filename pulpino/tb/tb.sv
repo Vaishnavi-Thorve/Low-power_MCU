@@ -59,9 +59,9 @@ module tb;
   logic         s_uart_rts;
 
 
-  logic [31:0]  gpio_in = '0;
-  logic [31:0]  gpio_dir;
-  logic [31:0]  gpio_out;
+  //logic [31:0]  gpio_in = '0;
+  //logic [31:0]  gpio_dir;
+  logic   gpio_out;
 
   logic [31:0]  recv_data;
 
@@ -123,10 +123,10 @@ module tb;
     .uart_cts          ( 1'b0         ),
     .uart_dsr          ( 1'b0         ),
 
-    .gpio_in           ( gpio_in      ),
+    //.gpio_in           ( gpio_in      ),
     .gpio_out          ( gpio_out     ),
-    .gpio_dir          ( gpio_dir     ),
-    .gpio_padcfg       (              ),
+    //.gpio_dir          ( gpio_dir     ),
+    //.gpio_padcfg       (              ),
 
     .tck_i             ( jtag_if.tck     ),
     .trstn_i           ( jtag_if.trstn   ),
@@ -213,8 +213,8 @@ module tb;
 
 
     // end of computation
-    if (~gpio_out[8])
-      wait(gpio_out[8]);
+    if (~gpio_out)
+      wait(gpio_out);
 
     spi_check_return_codes(exit_status);
 

@@ -57,10 +57,10 @@ module pulpino_top
     input  logic              uart_cts,
     input  logic              uart_dsr,
 
-    input  logic       [31:0] gpio_in,
-    output logic       [31:0] gpio_out,
-    output logic       [31:0] gpio_dir,
-    output logic [31:0] [5:0] gpio_padcfg,
+    //input  logic       [31:0] gpio_in,
+    output logic          gpio_out,  // for pin 8
+    //output logic       [31:0] gpio_dir,
+    //output logic [31:0] [5:0] gpio_padcfg,
 
     // JTAG signals
     input  logic              tck_i,
@@ -91,6 +91,7 @@ module pulpino_top
 
   logic        rstn_int;
   logic [31:0] boot_addr_int;
+  //logic [30 : 0] gpio_out;
   
 
   AXI_BUS
@@ -202,10 +203,10 @@ module pulpino_top
 
     // removed the spi master and i2c
 
-    .gpio_in         ( gpio_in           ),
+    //.gpio_in         ( gpio_in           ),
     .gpio_out        ( gpio_out          ),
-    .gpio_dir        ( gpio_dir          ),
-    .gpio_padcfg     ( gpio_padcfg       ),
+    //.gpio_dir        ( gpio_dir          ),
+    //.gpio_padcfg     ( gpio_padcfg       ),
 
     .core_busy_i     ( core_busy_int     ),
     .irq_o           ( irq_to_core_int   ),

@@ -55,10 +55,10 @@ module peripherals
 
   // removed spi master and the i2c 
 
-    input  logic       [31:0] gpio_in,
-    output logic       [31:0] gpio_out,
-    output logic       [31:0] gpio_dir,
-    output logic [31:0] [5:0] gpio_padcfg,
+    //input  logic       [31:0] gpio_in,
+    output logic          gpio_out,
+    //output logic       [31:0] gpio_dir,
+    //output logic [31:0] [5:0] gpio_padcfg,
 
     input  logic              core_busy_i,
     output logic [31:0]       irq_o,
@@ -280,10 +280,10 @@ module peripherals
     .PREADY     ( s_gpio_bus.pready     ),
     .PSLVERR    ( s_gpio_bus.pslverr    ),
 
-    .gpio_in      ( gpio_in       ),
+    //.gpio_in      ( gpio_in       ),
     .gpio_out     ( gpio_out      ),
-    .gpio_dir     ( gpio_dir      ),
-    .gpio_padcfg  ( gpio_padcfg   ),
+    //.gpio_dir     ( gpio_dir      ),
+    //.gpio_padcfg  ( gpio_padcfg   ),
     .interrupt    ( s_gpio_event  )
   );
 

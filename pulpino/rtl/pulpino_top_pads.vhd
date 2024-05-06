@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity pulpio_top_pads is 
+entity pulpino_top_pads is 
     port( clk            : in std_logic;
           rst_n          : in std_logic;
           testmode_i     : in std_logic;

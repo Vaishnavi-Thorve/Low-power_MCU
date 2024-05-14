@@ -73,7 +73,7 @@ vlog -quiet -sv -work ${LIB_PATH} ${RTL_PATH}/components/pulp_clock_inverter.sv 
 vlog -quiet -sv -work ${LIB_PATH} ${RTL_PATH}/components/pulp_clock_mux2.sv         || goto error
 vlog -quiet -sv -work ${LIB_PATH} ${RTL_PATH}/components/generic_fifo.sv            || goto error
 vlog -quiet -sv -work ${LIB_PATH} ${RTL_PATH}/components/rstgen.sv                  || goto error
-vlog -quiet     -work ${LIB_PATH} ${RTL_PATH}/components/SPHDL100909.v              || goto error
+vlog -quiet     -work ${LIB_PATH} +define+functional ${RTL_PATH}/components/SPHDL100909.v              || goto error
 vlog -quiet -sv -work ${LIB_PATH} ${RTL_PATH}/components/sp_ram.sv                  || goto error
 
 

@@ -275,7 +275,7 @@ integer po,i;
 begin
 
    tempReg1 = WordX;
-   if (^Address !== X) begin
+   if (^Address !== X) begin //takes the xor value of the address
       if (ValidAddress) begin
       `ifdef slm
          $slm_ReadMemoryS(MemAddr, Address, tempReg1);

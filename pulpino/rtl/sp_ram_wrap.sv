@@ -45,7 +45,7 @@ module sp_ram_wrap
     // TODO: we should kill synthesis when the ram size is larger than what we
     // have here
 
-  `elsif ASIC
+ /* `elsif ASIC
     // RAM bypass logic
     logic [31:0] ram_out_int;
     // assign rdata_o = (bypass_en_i) ? wdata_i : ram_out_int;
@@ -66,9 +66,9 @@ module sp_ram_wrap
       .rdata_o ( ram_out_int             ),
       .we_i    ( (we_i & ~bypass_en_i)   ),
       .be_i    ( be_i                    )
-    );
+    ); */
 
-  `else
+  `else 
      sp_ram
      #(
        .ADDR_WIDTH ( ADDR_WIDTH ),

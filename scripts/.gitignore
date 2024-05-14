@@ -1,0 +1,5 @@
+outputs/
+vhdl/
+medfilt.cmd
+modelsim.ini
+testvectors.txt
